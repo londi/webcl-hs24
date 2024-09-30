@@ -5,34 +5,77 @@
     <title>CSS Triangle</title>
     <style>
 
+
         #one {
-            width:                  0;
-            aspect-ratio:           1 / 1;
-            border-style:           solid;
-            --triangle-size:        100px;
-            --triangle-side-size:   calc(var(--triangle-size) / 2);
-            border-width:           var(--triangle-size)
-                                    var(--triangle-side-size)
-                                    0
-                                    var(--triangle-side-size);
-            border-color:     blue transparent transparent transparent ;
+            width: 0px;
+            --triangle-size: 100px;
+            border-style: solid;
+            border-width: var(--triangle-size) calc(var(--triangle-size) / 2) 0px calc(var(--triangle-size) / 2);
+            border-color: blue transparent transparent transparent;
+            animation: colorChange 2s infinite, sparkle 0.5s infinite;
         }
+
+        @keyframes colorChange {
+            0% {
+                border-color: blue transparent transparent transparent;
+                transform: rotate(0);
+            }
+            25% {
+                border-color: red transparent transparent transparent;
+                transform: rotate(90deg);
+            }
+            50% {
+                border-color: green transparent transparent transparent;
+                transform: rotate(180deg);
+            }
+            75% {
+                border-color: yellow transparent transparent transparent;
+                transform: rotate(270deg);
+            }
+            100% {
+                border-color: blue transparent transparent transparent;
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
         #two {
-            background-color: red;
-            width:            100px; /* for experiments only */
+            /*background-color: red;*/
+            /*width:            100px; !* for experiments only *!*/
+
+            width: 0px;
+            --triangle-size: 100px;
+            border-style: solid;
+            border-width: var(--triangle-size) calc(var(--triangle-size) / 2) 0px calc(var(--triangle-size) / 2);
+            border-color: red transparent transparent transparent;
         }
+
         #three {
-            background-color: green;
-            width:            100px; /* for experiments only */
+            /*background-color: green;*/
+            /*width:            100px; !* for experiments only *!*/
+
+            width: 0px;
+            --triangle-size: 100px;
+            border-style: solid;
+            border-width: var(--triangle-size) calc(var(--triangle-size) / 2) 0px calc(var(--triangle-size) / 2);
+            border-color: green transparent transparent transparent;
         }
 
     </style>
 </head>
 <body>
 
-<div id="one"> </div>
-<div id="two"> </div>
-<div id="three"> </div>
+<div id="one"></div>
+<div id="two"></div>
+<div id="three"></div>
 
 </body>
 </html>
