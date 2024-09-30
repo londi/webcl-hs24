@@ -1,11 +1,9 @@
 // stand-in for an asynchronous service
 
 const fortunes = [
-    "Do the homework",
-    "Care for the JavaScript Toolbox",
-    "Watch the recommended videos",
-    "Read the recommended chapters in You-dont-know-JS",
-    "Do the dataflow excel challenge!"
+    "Chueli streichle",
+    "Chueli mälche",
+    "Chälbli gaume",
 ];
 
 function fortuneService(whenDone) {
